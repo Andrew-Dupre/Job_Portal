@@ -1,12 +1,12 @@
 import React from "react";
-import ReviewLine from "./Pages/ReviewLine";
+import InterviewSheet from "./Pages/InterviewSheet";
 
 const App = () => {
-  return (
-    <div className="App">
-      <ReviewLine />
-    </div>
-  );
+    return (
+        <div className="App">
+            <InterviewSheet />
+        </div>
+    );
 };
 
 export default App;
