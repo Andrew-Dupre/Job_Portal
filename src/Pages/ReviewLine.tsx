@@ -11,7 +11,7 @@ import {
 import MoreVertIcon from "@mui/icons-material/MoreVert";
 import IconButton from "@mui/material/IconButton";
 import { Colors } from "../Styles/colors";
-import { rows, columns } from "../Data/dummy"; //dummy data
+import { rows, columns } from "../data/dummy"; //dummy data
 
 export default function ReviewLine() {
   return (
