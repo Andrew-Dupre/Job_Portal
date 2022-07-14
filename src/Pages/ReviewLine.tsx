@@ -11,7 +11,7 @@ import {
 import MoreVertIcon from "@mui/icons-material/MoreVert";
 import IconButton from "@mui/material/IconButton";
 import { Colors } from "../Styles/colors";
-import { rows, columns } from "../Data/dummy";
+import { rows, columns } from "../Data/dummy"; //dummy data
 
 export default function ReviewLine() {
   return (
@@ -39,6 +39,9 @@ export default function ReviewLine() {
                   <IconButton
                     style={{ color: Colors.primary }}
                     aria-label="actions"
+                    onClick={() => {
+                      alert("Actions");
+                    }}
                   >
                     <MoreVertIcon />
                   </IconButton>
