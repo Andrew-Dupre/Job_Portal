@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "jsx": "react",
+    "allowSyntheticDefaultImports": true,
+    "lib": ["es6", "DOM"],
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "strictNullChecks": true,
+    "outDir": "./dist/",
+    "module": "es2020",
+    "allowJs": true,
+    "moduleResolution": "Node"
+  }
+}
