@@ -4,12 +4,14 @@ import {
   Table,
   TableBody,
   TableCell,
-  TableContainer,
   TableHead,
   TableRow,
+  Icon,
 } from "@mui/material";
-
-const columns = [{ field: "id", headerName: "ID", width: 70 }];
+import MoreVertIcon from "@mui/icons-material/MoreVert";
+import IconButton from "@mui/material/IconButton";
+import { Colors } from "../Styles/colors";
+import { rows, columns } from "../Data/dummy";
 
 export default function ReviewLine() {
   return (
@@ -18,10 +20,33 @@ export default function ReviewLine() {
         <TableHead>
           <TableRow>
             {columns.map((header) => {
-              return <TableCell>{header.headerName}</TableCell>;
+              return (
+                <TableCell style={{ width: header.width }}>
+                  {header.headerName}
+                </TableCell>
+              );
             })}
           </TableRow>
         </TableHead>
+        <TableBody>
+          {rows.map((row) => {
+            return (
+              <TableRow>
+                <TableCell>{row.name}</TableCell>
+                <TableCell>{row.departement}</TableCell>
+                <TableCell>{row.email}</TableCell>
+                <TableCell>
+                  <IconButton
+                    style={{ color: Colors.primary }}
+                    aria-label="actions"
+                  >
+                    <MoreVertIcon />
+                  </IconButton>
+                </TableCell>
+              </TableRow>
+            );
+          })}
+        </TableBody>
       </Table>
     </Container>
   );
