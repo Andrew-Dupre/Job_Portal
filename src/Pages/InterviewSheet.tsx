@@ -15,16 +15,13 @@ import {
     Typography,
     Toolbar,
     Tooltip,
-    FormControlLabel,
     Paper,
-    Switch,
 } from "@mui/material";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
 import DeleteIcon from "@mui/icons-material/Delete";
 import FilterListIcon from "@mui/icons-material/FilterList";
 import { visuallyHidden } from "@mui/utils";
 import { rows, headCells, Data } from "../Data/InterviewSheetData";
-import { Colors } from "../Styles/colors";
 
 function descendingComparator<T>(a: T, b: T, orderBy: keyof T) {
     if (b[orderBy] < a[orderBy]) {
