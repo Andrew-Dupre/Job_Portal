@@ -1,10 +1,10 @@
 import React from "react";
-import ReviewLine from "./Pages/ReviewLine";
+import Configuration from "./Pages/Configuration";
 
 const App = () => {
   return (
-    <div className="App">
-      <ReviewLine />
+    <div>
+      <Configuration />
     </div>
   );
 };
