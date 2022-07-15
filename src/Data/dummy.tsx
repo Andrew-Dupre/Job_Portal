@@ -1,12 +1,51 @@
 import { GridColDef } from "@mui/x-data-grid";
+import React from "react";
+import MoreVertIcon from "@mui/icons-material/MoreVert";
+import IconButton from "@mui/material/IconButton";
+
+const handleActionclick = (index: any) => {
+  alert(index);
+};
 
 export const columns: GridColDef[] = [
-  { field: "name", headerName: "Name", width: 130 },
-  { field: "departement", headerName: "Departement", width: 130 },
+  {
+    field: "name",
+    headerName: "Name",
+    flex: 1,
+    headerClassName: "header-color",
+  },
+  {
+    field: "departement",
+    headerName: "Departement",
+    flex: 1,
+    headerClassName: "header-color",
+  },
   {
     field: "email",
     headerName: "Email",
-    width: 90,
+    flex: 1,
+    headerClassName: "header-color",
+  },
+  {
+    headerClassName: "header-color",
+    field: "actions",
+    headerName: "Actions",
+    sortable: false,
+    align: "center",
+    headerAlign: "center",
+    flex: 0.5,
+    disableColumnMenu: true,
+    renderCell: (params) => {
+      return (
+        <IconButton
+          onClick={() => {
+            handleActionclick(params.row.id);
+          }}
+        >
+          <MoreVertIcon />
+        </IconButton>
+      );
+    },
   },
 ];
 
