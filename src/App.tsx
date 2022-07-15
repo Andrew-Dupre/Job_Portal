@@ -1,10 +1,11 @@
 import React from "react";
-import InterviewSheet from "./Pages/InterviewSheet";
+
+import Config from "./Pages/Config";
 
 const App = () => {
     return (
         <div className="App">
-            <InterviewSheet />
+            <Config />
         </div>
     );
 };
