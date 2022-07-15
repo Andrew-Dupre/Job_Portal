@@ -1,8 +1,4 @@
 import { GridColDef } from "@mui/x-data-grid";
-import * as React from "react";
-import { Edit, Delete } from "@mui/icons-material";
-import { IconButton, Stack, Typography } from "@mui/material";
-import { Colors } from "../Styles/colors";
 
 export const columns: GridColDef[] = [
   {
