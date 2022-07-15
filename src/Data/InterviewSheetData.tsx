@@ -1,35 +1,35 @@
-interface Header {
-    SheetName: string;
-    CreatedBy: string;
-    CreatedDate: string;
-    Actions: string;
-}
-
-interface Row {
-    id: number;
+export interface Data {
     SheetName: string;
     CreatedBy: string;
     CreatedDate: string;
 }
 
-export const HeaderArray: Header[] = [{ SheetName: "Sheet Name", CreatedBy: "Created By", CreatedDate: "Created At", Actions: "Actions" }];
-export const RowArray: Row[] = [
-    {
-        id: 1,
-        SheetName: "Junior SE Interview Sheet",
-        CreatedBy: "Thomas Lee",
-        CreatedDate: "2020-01-01",
-    },
-    {
-        id: 2,
-        SheetName: "Senior SE Interview Sheet",
-        CreatedBy: "Jefferson Lee",
-        CreatedDate: "2020-01-01",
-    },
-    {
-        id: 3,
-        SheetName: "Accountant Interview Sheet",
-        CreatedBy: "Andrea Thomas",
-        CreatedDate: "2020-01-01",
-    },
+function createData(SheetName: string, CreatedBy: string, CreatedDate: string): Data {
+    return {
+        SheetName,
+        CreatedBy,
+        CreatedDate,
+    };
+}
+
+interface HeadCell {
+    disablePadding: boolean;
+    id: keyof Data;
+    label: string;
+    numeric: boolean;
+}
+
+export const headCells: HeadCell[] = [
+    { id: "SheetName", numeric: false, disablePadding: true, label: "Sheet Name" },
+    { id: "CreatedBy", numeric: false, disablePadding: true, label: "Created By" },
+    { id: "CreatedDate", numeric: false, disablePadding: true, label: "Created Date" },
+];
+
+export const rows = [
+    createData("Junior SE Interview Sheet", "John Doe", "2020-01-01"),
+    createData("Senior SE Interview Sheet", "John Doe", "2020-01-01"),
+    createData("Accountant Interview Sheet", "John Doe", "2020-01-01"),
+    createData("Director Interview Sheet", "John Doe", "2020-01-01"),
+    createData("Accountant Interview Sheet", "John Doe", "2020-01-01"),
+    createData("Senior SE Interview Sheet", "John Doe", "2020-01-01"),
 ];
