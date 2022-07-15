@@ -12,22 +12,18 @@ export const columns: GridColDef[] = [
     field: "name",
     headerName: "Name",
     flex: 1,
-    headerClassName: "header-color",
   },
   {
     field: "departement",
     headerName: "Departement",
     flex: 1,
-    headerClassName: "header-color",
   },
   {
     field: "email",
     headerName: "Email",
     flex: 1,
-    headerClassName: "header-color",
   },
   {
-    headerClassName: "header-color",
     field: "actions",
     headerName: "Actions",
     sortable: false,
@@ -91,6 +87,12 @@ export const rows = [
   },
   {
     id: 10,
+    name: "Roxie",
+    departement: "Digital",
+    email: "email@example.com",
+  },
+  {
+    id: 11,
     name: "Roxie",
     departement: "Digital",
     email: "email@example.com",
