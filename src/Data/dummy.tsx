@@ -1,12 +1,24 @@
 import { GridColDef } from "@mui/x-data-grid";
+import * as React from "react";
+import { Edit, Delete } from "@mui/icons-material";
+import { IconButton, Stack, Typography } from "@mui/material";
+import { Colors } from "../Styles/colors";
 
 export const columns: GridColDef[] = [
-  { field: "name", headerName: "Name", width: 130 },
-  { field: "departement", headerName: "Departement", width: 130 },
+  {
+    field: "name",
+    headerName: "Name",
+    flex: 1,
+  },
+  {
+    field: "departement",
+    headerName: "Departement",
+    flex: 1,
+  },
   {
     field: "email",
     headerName: "Email",
-    width: 90,
+    flex: 1,
   },
 ];
 
@@ -52,6 +64,12 @@ export const rows = [
   },
   {
     id: 10,
+    name: "Roxie",
+    departement: "Digital",
+    email: "email@example.com",
+  },
+  {
+    id: 11,
     name: "Roxie",
     departement: "Digital",
     email: "email@example.com",
