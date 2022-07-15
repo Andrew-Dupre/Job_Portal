@@ -1,25 +1,59 @@
-interface headers {
-  headerName: string;
-  width: number;
-}
+import { GridColDef } from "@mui/x-data-grid";
 
-interface rows {
-  name: string;
-  departement: string;
-  email: string;
-}
-
-export const columns: headers[] = [
-  { headerName: "Name", width: 50 },
-  { headerName: "Departement", width: 80 },
-  { headerName: "Email", width: 80 },
-  { headerName: "Actions", width: 30 },
+export const columns: GridColDef[] = [
+  { field: "name", headerName: "Name", width: 130 },
+  { field: "departement", headerName: "Departement", width: 130 },
+  {
+    field: "email",
+    headerName: "Email",
+    width: 90,
+  },
 ];
 
-export const rows: rows[] = [
+export const rows = [
+  { id: 1, name: "Snow", departement: "Digital", email: "email@example.com" },
+  { id: 2, name: "Lannister", departement: "IT", email: "email@example.com" },
   {
-    name: "Andrew",
+    id: 3,
+    name: "Lannister",
+    departement: "Marketing",
+    email: "email@example.com",
+  },
+  {
+    id: 4,
+    name: "Stark",
+    departement: "Marketing",
+    email: "email@example.com",
+  },
+  {
+    id: 5,
+    name: "Targaryen",
     departement: "Digital",
-    email: "andrew@gmail.com",
+    email: "email@example.com",
+  },
+  {
+    id: 6,
+    name: "Melisandre",
+    departement: "IT",
+    email: "email@example.com",
+  },
+  { id: 7, name: "Clifford", departement: "IT", email: "email@example.com" },
+  {
+    id: 8,
+    name: "Frances",
+    departement: "Digital",
+    email: "email@example.com",
+  },
+  {
+    id: 9,
+    name: "Roxie",
+    departement: "Digital",
+    email: "email@example.com",
+  },
+  {
+    id: 10,
+    name: "Roxie",
+    departement: "Digital",
+    email: "email@example.com",
   },
 ];
