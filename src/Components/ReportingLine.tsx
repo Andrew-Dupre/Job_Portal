@@ -13,8 +13,9 @@ export default function Config() {
       elevation={1}
       sx={{
         width: "100%",
-        height: "80vh",
+        height: "fit-content",
         borderRadius: "10px",
+        paddingBottom: 8,
       }}
     >
       <div style={{ display: "flex", justifyContent: "flex-end" }}>
