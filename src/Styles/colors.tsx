@@ -4,4 +4,5 @@ export const Colors: any = {
   other: "#DCD7C9",
   statusGreen: "#198038",
   statusRed: "#DA1E28",
+  uploadButton: "#0F62FE",
 };

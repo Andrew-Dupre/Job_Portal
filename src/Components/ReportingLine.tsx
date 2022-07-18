@@ -23,15 +23,16 @@ export default function Config() {
             display: "flex",
             justifyContent: "space-between",
             width: "330px",
+            margin: "20px 30px 0px 0px",
           }}
         >
           <Button
             startIcon={<Add />}
             variant="contained"
             sx={{
-              backgroundColor: "#28475C",
+              backgroundColor: Colors.primary,
               "&:hover": {
-                backgroundColor: "#2e526a",
+                backgroundColor: Colors.primary,
               },
             }}
             size="small"
@@ -42,7 +43,7 @@ export default function Config() {
             startIcon={<Upload />}
             variant="contained"
             sx={{
-              backgroundColor: "#0F62FE",
+              backgroundColor: Colors.uploadButton,
               "&:hover": {
                 backgroundColor: "#2d76fe",
               },
@@ -72,7 +73,7 @@ export default function Config() {
             height: 131 + 10 * 50 + "px",
             width: "100%",
             margin: "auto",
-            marginTop: 5,
+            marginTop: 3,
           }}
         >
           <DataGrid
